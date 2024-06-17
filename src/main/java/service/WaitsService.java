@@ -10,18 +10,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class WaitService {
+public class WaitsService {
     private WebDriver driver;
     private Duration timeout;
     private WebDriverWait driverWait;
 
-    public WaitService(WebDriver driver, Duration duration) {
+    public WaitsService(WebDriver driver, Duration duration) {
         this.driver = driver;
         this.timeout = duration;
         this.driverWait = new WebDriverWait(this.driver, this.timeout);
     }
 
-    public WaitService(WebDriver driver) {
+    public WaitsService(WebDriver driver) {
         this.driver = driver;
         this.timeout = Duration.ofSeconds(ReadProperties.getTimeout());
         this.driverWait = new WebDriverWait(this.driver, this.timeout);
