@@ -45,8 +45,8 @@
 
 https://app.testiny.io
 
-1. PageObject + Lombok + Builder + Selenium WD + TestNG + Wrappers
+1. PageObject + Lombok + Selenium WD + TestNG + Wrappers + Allure Report
 2. Прогон c параллельным запуском (Smoke and Regression)
 3. Основное задание
-4. Github Actions
+4. CI/CD Github Actions
 5. Доп задание “Создать данные для тестов используя API, данные взять из JSON”
