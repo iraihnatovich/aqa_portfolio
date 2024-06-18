@@ -47,8 +47,9 @@ public class EditCasePage extends BasePage {
         return new AllCasePage(driver);
     }
 
-    public void chooseFileForAttachment(String filePath) {
+    public EditCasePage chooseFileForAttachment(String filePath) {
         getAddAttachmentElement().sendKeys(filePath);
+        return this;
     }
 
     public boolean isDocumentAttached() {

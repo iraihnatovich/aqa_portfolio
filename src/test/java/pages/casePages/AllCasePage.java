@@ -92,14 +92,14 @@ public class AllCasePage extends BasePage {
         return false;
     }
 
-    public BasePage openCase(TestCase testCase) {
+    public EditCasePage openCase(TestCase testCase) {
         for (UiElement uiElement : getCaseTitleList()) {
             if (uiElement.getText().trim().equals(testCase.getTitle())) {
                 uiElement.click();
                 return new EditCasePage(driver);
             }
         }
-        return this;
+        return null;
     }
 
     public void clickCreateNewTestButton() {
@@ -109,6 +109,10 @@ public class AllCasePage extends BasePage {
     public CreateCasePage createNewCase() {
         clickCreateNewTestButton();
         return new CreateCasePage(driver);
+    }
+
+    public boolean isModalWindowDisplayed() {
+        return getDeleteModalWindow().isWindowDisplayed();
     }
 
     public AllCasePage confirmCaseDeletion() {
