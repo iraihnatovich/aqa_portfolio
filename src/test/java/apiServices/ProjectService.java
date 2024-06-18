@@ -27,7 +27,7 @@ public class ProjectService implements IProjectService {
     public Project addSetupProject() {
         return given()
                 .body(ProjectService.class.getClassLoader()
-                        .getResourceAsStream("dataApiTest/setupProject.json"))
+                        .getResourceAsStream("apiTestData/setupProject.json"))
                 .log().body()
                 .post(Endpoints.ADD_PROJECT)
                 .then()
