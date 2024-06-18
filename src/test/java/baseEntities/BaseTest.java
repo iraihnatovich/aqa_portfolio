@@ -28,7 +28,6 @@ public class BaseTest {
     protected TestCase setupCase;
     protected ProjectService projectService;
     protected TestCaseService testCaseService;
-
     protected WebDriver driver;
     protected WaitsService waitsService;
     protected LoginPage loginPage;
@@ -65,7 +64,7 @@ public class BaseTest {
 
         driver.get(ReadProperties.getUrl());
         loginPage = new LoginPage(driver);
-        dashboardPage =  loginPage.successfulLogIn(setupUser);
+        dashboardPage = loginPage.successfulLogIn(setupUser);
         dashboardPage.selectProjectByText(setupProject.getName());
     }
 
@@ -83,7 +82,4 @@ public class BaseTest {
         iTestContext.setAttribute("WebDriver", driver);
     }
 
-    public static WebDriver getDriverFromContext(ITestContext iTestContext) {
-        return (WebDriver) iTestContext.getAttribute("WebDriver");
-    }
 }

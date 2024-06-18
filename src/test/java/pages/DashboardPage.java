@@ -41,7 +41,7 @@ public class DashboardPage extends BasePage {
         return new Button(driver, leftSideBarTR);
     }
 
-    public AllCasePage navigateToCasesPage() {
+    public AllCasePage navigateAllCasesPage() {
         getLeftSideBarTCButton().click();
         return new AllCasePage(driver);
     }

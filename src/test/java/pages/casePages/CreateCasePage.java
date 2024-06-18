@@ -39,6 +39,11 @@ public class CreateCasePage extends BasePage {
         return this;
     }
 
+    public CreateCasePage enterCaseTitle(String caseName) {
+        getCaseTitleInput().sendKeys(caseName);
+        return this;
+    }
+
     public AllCasePage clickCreateButton() {
         getCreateCaseButton().click();
         try {
