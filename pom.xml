@@ -76,7 +76,7 @@
                     </argLine>
                     <suiteXmlFiles>
                         <suiteXmlFile>
-                            target/test-classes/${xmlFileName}
+                            target/test-classes/${suiteFileName}
                         </suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
