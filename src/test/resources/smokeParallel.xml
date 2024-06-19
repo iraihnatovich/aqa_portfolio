@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Case Entity Suite" parallel="tests" thread-count="2">
+    <test name="API case entity test">
+        <classes>
+            <class name="tests.api.ApiCaseTest"/>
+        </classes>
+    </test>
+    <test name="GUI case entity test">
+        <classes>
+            <class name="tests.gui.CreateEntityTest">
+                <methods>
+                    <include name="createCaseEntityTest"/>
+                </methods>
+            </class>
+            <class name="tests.gui.UpdateEntityTest"/>
+            <class name="tests.gui.DeleteEntityTest"/>
+        </classes>
+    </test>
+</suite>
